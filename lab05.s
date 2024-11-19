@@ -68,7 +68,12 @@ taken:
 # TODO: Add an example where an instruction passes its result to the 2nd following instruction
 # There should be no stalls
 # ----------------------------------------------------------------------------------------
-    # nop instructions added between examples
+    
+    add  t1, s0, s1   # t1 = 1
+    addi t2, s0, s2   # t2 = 2
+    add  t3, t1, s3   # t3 = 4
+
+# nop instructions added between examples
     add  zero, zero, zero  
     add  zero, zero, zero  
     add  zero, zero, zero  
@@ -79,7 +84,12 @@ taken:
 #  registers of both of the two instructions preceeding it. It should get the newest value.
 # There should be no stalls
 # ----------------------------------------------------------------------------------------
-    # nop instructions added between examples
+    
+    add  t1, s0, s1   # t1 = 1
+    addi t1, s0, s2   # t1 = 2
+    add  t3, t1, s3   # t3 = 5
+
+# nop instructions added between examples
     add  zero, zero, zero  
     add  zero, zero, zero  
     add  zero, zero, zero  
